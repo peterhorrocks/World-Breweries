@@ -20,32 +20,40 @@
 
             <div class="header" >
                 <div></div>
-                <h1 class="header-1">World Breweries</h1>
+
+                <!-- Heading -->
+                <h1 class="header-1"><a href="/" method="GET" class="header-link">World Breweries</a></h1>
+
+                <!-- T-Rex Help button -->
                 <help id="helpButton" class="header-2" type="submit">
                     <div class="header-image-container">
                         <img class="header-image" src="/images/dragon-4132779_640.png">
-                        <p class="p-header-image">Help</p>
+                        <div class="header-image-text">
+                            <p class="p-header-image">Help</p>
+                        </div>
                     </div>
                 </help>
             </div>
 
-            <!-- Help Modal -->
+            <!-- Launch Help Modal -->
 
             <div id="helpModal" class="help-modal">
 
                 <!-- Help Modal content -->
                 <div class="help-modal-content">
                     <span class="close">&times;</span>
-                    <h2>Help</h2>
+                    <h2>World Breweries Help</h2>
                     <p>1. To view an <b>Individual Brewery</b>, select one from the <b>Select a Brewery</b> dropdown menu, and click the <b>SUBMIT button</b>. If a brewery is not selected, you will be provided with a full list in alphabetical order of Name.</p>
                     <p>2. To view breweries by <b>Type</b> (ie. micro brewery, large brewery, brewpub etc..), select an option from the <b>View Brewery by Type</b> dropdown menu, and click the <b>SUBMIT</b> button. If an option is not selected, you will be prompted to select one.</p>
                     <p>3. To view breweries by <b>County or State</b>, select an option from the <b>View Brewery by County/State</b> dropdown menu and click the <b>SUBMIT</b> button. If an option is not selected, you will be provided with a full list in alphabetical order of County/State.</p>
                     <p>4. To view breweries by <b>Country</b>, select an option from the <b>View Brewery by Country</b> dropdown menu and click the <b>SUBMIT</b> button. If an option is not selected, you will be provided with a full list in alphabetical order of Country.</p>
+                    <p>5. Click on the <b>World Breweries</b> header to return to the Home Page showing a <b>random</b> brewery.</p>
                 </div>
 
             </div>          
 
             <!-- Help Modal Script -->
+             <!-- Script placed here, since the DOM model does not work with Node -->
             <script>
                 // Get the modal
                 var modal = document.getElementById("helpModal");
@@ -85,7 +93,7 @@
 
             <div class="form-options">
 
-                <!-- Name Form -->
+                <!-- NAME Form -->
                 <div class="form">
                     <form action="/name" method="POST">
                         <!-- Dropdown box for Name -->
@@ -111,7 +119,7 @@
                     </form>
                 </div>
 
-                <!-- Type Form -->
+                <!-- TYPE Form -->
                 <div class="form">
                     <form action="/type" method="POST">
                         <!-- Dropdown box for Type -->
@@ -132,10 +140,10 @@
                     </form>
                 </div>
 
-                <!-- County Form -->
+                <!-- COUNTY/STATE Form -->
                 <div class="form">
                     <form action="/county" method="POST">
-                        <!-- Dropdown box for County -->
+                        <!-- Dropdown box for County/State -->
                         <select name="county" id="county" class="select">
                             <option label="View Brewery by County/State" class="option-header">
                             <option value="">All</option>
@@ -160,7 +168,7 @@
                     </form>
                 </div>
 
-                <!-- Country Form -->
+                <!-- COUNTRY Form -->
                 <div class="form">
                     <form action="/country" method="POST">
                         <!-- Dropdown box for Country -->
@@ -195,6 +203,7 @@
 
         <div class="results-section">
 
+            <!-- Results Table-->
             <div class="results-table">
 
                 <!-- If any Results have been returned, display the table -->

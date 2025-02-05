@@ -24,7 +24,6 @@ app.get("/", async (req, res) => {
         const response = await axios.get(
             "https://api.openbrewerydb.org/v1/breweries/random");
         const result = response.data;
-        console.log(result);
 
         // Send API data to Home page
         res.render("index.ejs", {
@@ -128,7 +127,7 @@ app.post("/county", async (req, res) => {
 });
 
 
-// Get the brewery by the "Country"
+// Get the brewery by the COUNTRY
 app.post("/country", async (req, res) => {
     console.log("GET /country")
 

@@ -1,12 +1,13 @@
-/* LAYOUT Styling */
+/* LAYOUT STYLING */
+/* ============== */
 
+/* Apply a background image to cover the whole screen */
 body {
     background: url(/images/ai-generated-8554221_640.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0;
     margin: 0;
-    height: 100vh;
 }
 
 .container {
@@ -14,17 +15,26 @@ body {
     margin-right: 2%;
 }
 
+/* HEADER Section */
 
-/* Header Section */
-
+/* Centre the Header Section */
 .header-section {
     width: 100%;
     margin: auto;
+    padding: 0;
 }
+/* Header Grid evenly distributes the componenets */
 .header {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
+    padding: 0;
 }
+/* Help button section */
+help {
+    width: 90%;
+    cursor: pointer;
+}
+/* T-Rex Help component */
 .header-image-container {
     width: fit-content;
     margin: 0;
@@ -35,108 +45,16 @@ body {
     margin: 0;
     padding: 0;
 }
-help {
-    width: 90%;
-    cursor: pointer;
-}
-
-/* Form Section */
-
-.form-section {
-    width: 100%;
-    margin-top: 3%;
-}
-.form-options {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 95%;
-    margin: auto;
-    padding: 0;
-    padding-left: 1%;
-    padding-right: 1%;
-}
-.form {
-    margin: auto;
-}
-.button {
-    margin: auto;
-    margin-top: 2%;
-
-}
-
-.select {
-    width: 200px;
-}
-
-/* Results Section */
-
-.results-section {
-    width: 100%;
-    margin-top: 3%;
-}
-.results-table {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin: auto;
-    padding: 1%;
-    background-color: #800000;
-    border-radius: 8px;;
-}
-.results-header {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
-    width: 98%;
-    margin-top: 0;
-    padding-top: 0;
-    padding-left: 1%;
-    padding-right: 1%;
-}
-.results-line {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
-    width: 98%;
-    margin-top: 0;
-    padding-left: 1%;
-    padding-right: 1%;
-    background-color: #F2E8C6;
-    border-top: solid; border-width: thin;
-}
-.results-field {
-    width: 10%;
-}
-
-/* Footer Section */
-.footer-section {
-    width: 95%;
-    margin: auto;
-    margin-top: 5%;
-    padding: 1%;
-    /* border: solid; */
+/* Text Help component */
+.header-image-text {
+    width: 50%;
+    padding: 2%;
+    margin-left: 25%;
     border-radius: 5px;
-    background-color: white;
-}
-.footer-line-1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-.footer-line-2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 2%;
-    margin-top: 1%;
+    background-color: #F2E8C6;
 }
 
-/* Miscellaneous */
-
-.button {
-    position: relative;
-    width: fit-content;
-}
-
-
-/* MODAL Styling */
+/* Help MODAL Styling */
 /* The Modal (background) */
 .help-modal {
     display: none; /* Hidden by default */
@@ -173,17 +91,123 @@ help {
     cursor: pointer;
 }
 
+/* FORM Section */
+
+.form-section {
+    width: 100%;
+    margin-top: 3%;
+}
+/* Form Grid evenly distributes the forms */
+.form-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 95%;
+    margin: auto;
+    padding: 0;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+/* Centre each form in it's grid column */
+.form {
+    margin: auto;
+}
+/* Centre the button under the dropdown */
+.button {
+    width: fit-content; 
+    margin: auto;
+    margin-top: 2%;
+}
+button {
+    cursor: pointer;
+}
+/* Stretch the form drop down */
+.select {
+    width: 200px;
+}
+
+/* RESULTS Section */
+
+.results-section {
+    width: 100%;
+    margin-top: 3%;
+}
+/* The Results Table is displayed flex column do that the Header and List */
+/* components are evenly under each other, if you get what I mean */
+.results-table {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    padding: 1%;
+    background-color: #800000;
+    border-radius: 8px;;
+}
+/* The Results header and list are displayed in a grid to allow more control */
+/* other the distribution of the fields */
+.results-header {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    width: 98%;
+    margin-top: 0;
+    padding-top: 0;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.results-line {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    width: 98%;
+    margin-top: 0;
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: #F2E8C6;
+    border-top: solid; border-width: thin;
+}
+.results-field {
+    width: 10%;
+}
+
+/* FOOTER Section */
+.footer-section {
+    width: 95%;
+    margin: auto;
+    margin-top: 5%;
+    padding: 1%;
+    border-radius: 5px;
+    background-color: white;
+}
+/* Evenly distribute the first line in a grid */
+.footer-line-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+/* A flex option worked out better for the second line */
+.footer-line-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2%;
+    margin-top: 1%;
+}
+
 
 /* CONTENT Styling */
+/* =============== */
 
-/* Header Text */
+/* HEADER TEXT */
+
 h1 {
     font-size: 700%;
     text-align: center;
     margin: 0;
-    margin-bottom: 1%;
     padding: 0;
+}
+.header-link {
+    text-decoration: none;
+    cursor: pointer;
     color: #F4511E;
+    margin: 0;
+    padding: 0;
 }
 .header-1 {
     text-align: center;
@@ -195,7 +219,8 @@ h1 {
     text-align: center;
 }
 
-/* Form Text */
+/* FORM TEXT */
+
 label {
     display: block;
     font-family: Arial, Helvetica, sans-serif;
@@ -230,7 +255,8 @@ button {
     border-radius: 5px;
 }
 
-/* Paragraph Text */
+/* PARAGRAPH TEXT */
+
 p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
@@ -252,7 +278,8 @@ p {
     text-align: center;
 }
 
-/* Footer Text */
+/* FOOTER TEXT */
+
 .footer-text {
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
@@ -273,6 +300,8 @@ p {
 
 
 /* DEVICE RESPONSE */
+/* =============== */
+
 /* TABLET > 769 and < 977px */
 /* SMARTPHONE AND SMALL TABLET > 576 and < 768 */
 /* MOBILE < 577 */
@@ -289,6 +318,17 @@ p {
 /* SMARTPHONE AND SMALL TABLET > 576 and < 768 */
 @media (min-width: 577px) and (max-width: 768px) {
 
+    /* With long lists, the background image was not working correctly, by means of */
+    /* white space below a certain point. Not sure if this is necessary, I am maintaining it */
+    /* since everthing appear to be working now, LOCALLY. So, I am reluctant to remove this */
+    body {
+        background: url(/images/ai-generated-8554221_640.jpg);
+        background-size: cover;
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+    }
+        
     /* Reduce heading size */
     h1 {
         font-size: 500%;
@@ -327,6 +367,14 @@ p {
 /* MOBILE < 577 */
 @media (max-width: 576px) {
 
+    body {
+        background: url(/images/ai-generated-8554221_640.jpg);
+        background-size: cover;
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+    }
+    
     /* Reduce heading size */
     h1 {
         font-size: 300%;
