@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Breweries</title>
+
+    <link rel="stylesheet" href="/styles/styles.css"
+
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- HEADER SECTION -->
+
+        <div class="header-section">
+
+            <!-- Header -->
+
+            <div class="header" >
+                <div></div>
+                <h1 class="header-1">World Breweries</h1>
+                <help id="helpButton" class="header-2" type="submit">
+                    <div class="header-image-container">
+                        <img class="header-image" src="/images/dragon-4132779_640.png">
+                        <p class="p-header-image">Help</p>
+                    </div>
+                </help>
+            </div>
+
+            <!-- Help Modal -->
+
+            <div id="helpModal" class="help-modal">
+
+                <!-- Help Modal content -->
+                <div class="help-modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Help</h2>
+                    <p>1. To view an <b>Individual Brewery</b>, select one from the <b>Select a Brewery</b> dropdown menu, and click the <b>SUBMIT button</b>. If a brewery is not selected, you will be provided with a full list in alphabetical order of Name.</p>
+                    <p>2. To view breweries by <b>Type</b> (ie. micro brewery, large brewery, brewpub etc..), select an option from the <b>View Brewery by Type</b> dropdown menu, and click the <b>SUBMIT</b> button. If an option is not selected, you will be prompted to select one.</p>
+                    <p>3. To view breweries by <b>County or State</b>, select an option from the <b>View Brewery by County/State</b> dropdown menu and click the <b>SUBMIT</b> button. If an option is not selected, you will be provided with a full list in alphabetical order of County/State.</p>
+                    <p>4. To view breweries by <b>Country</b>, select an option from the <b>View Brewery by Country</b> dropdown menu and click the <b>SUBMIT</b> button. If an option is not selected, you will be provided with a full list in alphabetical order of Country.</p>
+                </div>
+
+            </div>          
+
+            <!-- Help Modal Script -->
+            <script>
+                // Get the modal
+                var modal = document.getElementById("helpModal");
+                
+                // Get the button that opens the modal
+                var btn = document.getElementById("helpButton");
+                
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+                
+                // When the user clicks the button, open the modal 
+                btn.onclick = function() {
+                modal.style.display = "block";
+                }
+                
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() {
+                modal.style.display = "none";
+                }
+                
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+                }
+            </script>
+
+        </div>    <!-- End of Header Section -->
+
+
+        <!-- FORM SECTION -->
+
+        <div class="form-section">
+
+            <!-- Form Options -->
+
+            <div class="form-options">
+
+                <!-- Name Form -->
+                <div class="form">
+                    <form action="/name" method="POST">
+                        <!-- Dropdown box for Name -->
+                        <select name="name" id="name" class="select">
+                            <option label="Select a Brewery" class="option-header">
+                            <option value="360 degree brewing company">360 Degree Brewing Company</option>
+                            <option value="battle brewery">Battle Brewery</option>
+                            <option value="silver rocket brewing ltd">Silver Rocket Brewing Ltd</option>
+                            <option value="5 lamps brewery">5 Lamps Brewery</option>
+                            <option value="black donkey brewing">Black Donkey Brewing</option>
+                            <option value="boghopper brewery">Boghopper Brewery</option>
+                            <option value="fyne ales">Fyne Ales</option>
+                            <option value="loch lomond brewery">Loch Lomond Brewery</option>
+                            <option value="oban bay">Oban Bay</option>
+                            <option value="1 of us brewing company">1 of Us Brewing Company</option>
+                            <option value="10 barrel brewing co">10 Barrel Brewing Co</option>
+                            <option value="12 gates brewing company">12 Gates Brewing Company</option>
+                        </select>
+                        <!-- Image Button-->
+                        <div class="button">
+                            <button type="submit"><img src="/images/beer-4131737_64_icon.png">SUBMIT</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Type Form -->
+                <div class="form">
+                    <form action="/type" method="POST">
+                        <!-- Dropdown box for Type -->
+                        <select name="type" id="type" class="select">
+                            <option label="View Brewery by Type" class="option-header">
+                            <option value="">All</option>
+                            <option value="brewpub">Brew Pub</option>
+                            <option value="large">Large Brewery</option>
+                            <option value="micro">Micro Brewery</option>
+                            <option value="regional">Regional Brewery</option>
+                            <option value="nano">Very Small Brewery</option>
+                            <option value="bar">Bar</option>
+                        </select>
+                        <!-- Image Button-->
+                        <div class="button">
+                            <button type="submit"><img src="/images/flies-161350_64_icon.png">SUBMIT</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- County Form -->
+                <div class="form">
+                    <form action="/county" method="POST">
+                        <!-- Dropdown box for County -->
+                        <select name="county" id="county" class="select">
+                            <option label="View Brewery by County/State" class="option-header">
+                            <option value="">All</option>
+                            <option value="east sussex">East Sussex</option>
+                            <option value="west sussex">West Sussex</option>
+                            <option value="cork">Cork</option>
+                            <option value="dublin">Dublin</option>
+                            <option value="kilkenny">Kilkenny</option>
+                            <option value="argyll">Argyll</option>
+                            <option value="bute">Bute</option>
+                            <option value="east dunbartonshire">East Dunbartonshire</option>
+                            <option value="west dunbartonshire">West Dunbartonshire</option>
+                            <option value="california">California</option>
+                            <option value="new york">New York</option>
+                            <option value="oregon">Oregon</option>
+                            <option value="washington">Washington</option>
+                        </select>
+                        <!-- Image Button-->
+                        <div class="button">
+                            <button type="submit"><img src="/images/froth-307754_64_icon.png">SUBMIT</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Country Form -->
+                <div class="form">
+                    <form action="/country" method="POST">
+                        <!-- Dropdown box for Country -->
+                        <select name="country" id="country" class="select">
+                            <option label="View Brewery by Country" class="option-header">
+                            <option value="">All</option>
+                            <option value="england">England</option>
+                            <option value="ireland">Ireland</option>
+                            <option value="isle of man">Isle of Man</option>
+                            <option value="scotland">Scotland</option>
+                            <option value="united states">United States</option>
+                        </select>
+                        <!-- Image Button-->
+                        <div class="button">
+                            <button type="submit"><img src="/images/keg-32049_64_icon.png">SUBMIT</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>    <!-- End of Form Options -->
+
+        </div>    <!-- End of Form Section -->
+
+
+        <!-- RESULTS SECTION -->
+
+        <div class="results-section">
+
+            <div class="results-table">
+
+                <!-- If any Results have been returned, display the table -->
+                <% if (locals.breweryData) { %>
+
+                    <!-- Results Table Header -->
+                    <div class="results-header">
+                        <p class="p-results-header">Brewey Name</p>
+                        <p class="p-results-header">Type</p>
+                        <p class="p-results-header">State/County</p>
+                        <p class="p-results-header">Country</p>
+                    </div>
+
+                    <!-- Results Table Body -->
+                    <% breweryData.forEach(function(brewery) { %>
+                        <div class="results-line">
+                            <p><%= brewery.name %></p>
+                            <p><%= brewery.brewery_type %></p>
+                            <p><%= brewery.state_province %></p>
+                            <p><%= brewery.country %></p>
+                        </div>
+                    <% }) %>
+
+                <!-- Display any errors -->
+                <% } else if (locals.error) { %>
+
+                    <!-- Results Table Header -->
+                    <div class="results-header">
+                        <p class="p-results-header">Brewey Name</p>
+                        <p class="p-results-header">Type</p>
+                        <p class="p-results-header">State/County</p>
+                        <p class="p-results-header">Country</p>
+                    </div>
+
+                    <div class="results-line">
+                        <p><%= error %></p>
+                    </div>
+
+                <% }; %>
+
+            </div>    <!-- End of Results Table -->
+
+        </div>    <!-- End of Results Section -->
+
+
+        <!-- FOOTER SECTION -->
+        <footer class="footer-section">
+
+            <div class="footer-line-1">
+                <p class="footer-text">© 2025 Peter</p>
+                <p class="footer-text footer-heading">World Breweries</p>
+                <p class="footer-text footer-heading-end">Data provided by the Open Brewery DB API</p>
+            </div>
+
+            <div class="footer-line-2">
+                <p class="footer-text image-credits">Image Credits: Julius H. from Pixabay</p>
+                <p class="footer-text image-credits">Branimir Lambaša from Pixabay</p>
+                <p class="footer-text image-credits">OpenClipart-Vectors from Pixabay</p>
+                <p class="footer-text image-credits">Clker-Free-Vector-Images from Pixabay</p>
+            </div>
+
+        </footer>
+
+
+    </div>    <!-- End of Container -->
+
+       
+</body>
+
+</html>

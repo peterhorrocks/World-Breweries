@@ -1,0 +1,384 @@
+/* LAYOUT Styling */
+
+body {
+    background: url(/images/ai-generated-8554221_640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+
+/* Header Section */
+
+.header-section {
+    width: 100%;
+    margin: auto;
+}
+.header {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+.header-image-container {
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+}
+.header-image {
+    max-width: 150px;
+    margin: 0;
+    padding: 0;
+}
+help {
+    width: 90%;
+    cursor: pointer;
+}
+
+/* Form Section */
+
+.form-section {
+    width: 100%;
+    margin-top: 3%;
+}
+.form-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 95%;
+    margin: auto;
+    padding: 0;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.form {
+    margin: auto;
+}
+.button {
+    margin: auto;
+    margin-top: 2%;
+
+}
+
+.select {
+    width: 100%;
+}
+
+/* Results Section */
+
+.results-section {
+    width: 100%;
+    margin-top: 3%;
+}
+.results-table {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    padding: 1%;
+    background-color: #800000;
+    border-radius: 8px;;
+}
+.results-header {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    width: 98%;
+    margin-top: 0;
+    padding-top: 0;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.results-line {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    width: 98%;
+    margin-top: 0;
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: #F2E8C6;
+    border-top: solid; border-width: thin;
+}
+.results-field {
+    width: 10%;
+}
+
+/* Footer Section */
+.footer-section {
+    width: 95%;
+    margin: auto;
+    margin-top: 5%;
+    padding: 1%;
+    /* border: solid; */
+    border-radius: 5px;
+    background-color: white;
+}
+.footer-line-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.footer-line-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2%;
+    margin-top: 1%;
+}
+
+/* Miscellaneous */
+
+.button {
+    position: relative;
+    width: fit-content;
+}
+
+
+/* MODAL Styling */
+/* The Modal (background) */
+.help-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.help-modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}  
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* CONTENT Styling */
+
+/* Header Text */
+h1 {
+    font-size: 700%;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 1%;
+    padding: 0;
+    color: #F4511E;
+}
+.header-1 {
+    text-align: center;
+}
+.header-2 {
+    text-align: center;
+}
+.header-3 {
+    text-align: center;
+}
+
+/* Form Text */
+label {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    width: 60%;
+    margin-bottom: 1%;
+    padding: 2%;
+    background-color: white;
+    border-radius: 5px;
+}
+option {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+.option-header {
+    font-weight: bold;
+}
+select {
+    display: block;
+    width: 100%;
+    gap: 2%;
+    margin-bottom: 3%;
+    background-color: #F2E8C6;
+    padding: 3%;
+}
+button {
+    margin-bottom: 5%;
+    padding: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+    background-color:#F4511E ;
+    border-radius: 5px;
+}
+
+/* Paragraph Text */
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    color: black;
+    margin: 0;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.p-results-header {
+    color: white;
+    padding-top: 0;
+}
+.p-header-image {
+    font-weight: bold;
+    font-size: large;
+    color: #F4511E;
+    padding: 0;
+    margin:0;
+    text-align: center;
+}
+
+/* Footer Text */
+.footer-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    margin: 0;
+    padding: 0;
+}
+.footer-heading {
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+}
+.footer-heading-end {
+    text-align: right;
+}
+.image-credits {
+    font-size: small;
+}
+
+
+/* DEVICE RESPONSE */
+/* TABLET > 769 and < 977px */
+/* SMARTPHONE AND SMALL TABLET > 576 and < 768 */
+/* MOBILE < 577 */
+
+/* TABLET */
+@media (min-width: 769px) and (max-width: 976px) {
+
+    /* Reduced Heading Size */
+    h1 {
+        font-size: 600%;
+    }
+}
+
+/* SMARTPHONE AND SMALL TABLET > 576 and < 768 */
+@media (min-width: 577px) and (max-width: 768px) {
+
+    /* Reduce heading size */
+    h1 {
+        font-size: 500%;
+    }
+
+    /* Reduce size of form select */
+    .select {
+        width: 90%;
+    }
+    option {
+        font-size: small;
+    }
+
+    /* Expand table width */
+    .results-table {
+        width: 90%;
+    }
+    /* Reduce paragraph text size */
+    p {
+        font-size: small;
+    }
+
+    /* Reduce footer text size */
+    .footer-text {
+        font-size: small;
+    }
+    .footer-heading {
+        font-size: large;
+    }
+    .image-credits {
+        font-size: x-small;
+    }
+
+}
+
+/* MOBILE < 577 */
+@media (max-width: 576px) {
+
+    /* Reduce heading size */
+    h1 {
+        font-size: 300%;
+    }
+    .header-image {
+        max-width: 100px;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Display forms in rows */
+    .form-section {
+        display: flex;
+    }
+    .form-options {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+    /* Increase size of form select */
+    .select {
+        width: 200px;
+    }
+    /* Remove image from button */
+    button img {
+        display: none;
+    }
+
+    /* Maintain table width */
+    .results-table {
+        width: 95%;
+    }
+    /* Maintain paragraph text size */
+    p {
+        font-size: small;
+    }
+
+    /* Reduce footer text size */
+    .footer-text {
+        font-size: x-small;
+    }
+    .footer-heading {
+        font-size: medium;
+    }
+    .image-credits {
+        font-size: xx-small;
+    }
+
+}
+
+
