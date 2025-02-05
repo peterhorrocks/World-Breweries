@@ -34,7 +34,7 @@ In the **command line**, make sure that you are in your project directory.
 
 2.  Edit the **package.json** file, and include the entry **"type": "module",** under the "description". Save the file.
 
-3.  Next, run **npm install axios** or **npm i axios**. This will create a folder **node_modules^^ in your project folder, and install the axios module.
+3.  Next, run **npm install axios** or **npm i axios**. This will create a folder **node_modules** in your project folder, and install the axios module.
 
 4.  Do this for the **express**, **ejs** and **body-parser** node modules. These will automatically be included in the packag.json file under **"dependencies".**
 
